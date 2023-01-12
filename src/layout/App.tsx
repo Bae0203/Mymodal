@@ -1,7 +1,11 @@
+import react, { useState } from "react";
+
 function App() {
+  const [modalCh, setModalCh] = useState<boolean>();
   return (
     <>
-      <button>모달</button>
+      {modalCh ? <div>dd</div> : null}
+      <button onClick={() => setModalCh(!modalCh)}>dd</button>
     </>
   );
 }
