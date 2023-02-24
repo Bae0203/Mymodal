@@ -24,6 +24,7 @@ function App() {
           context="경고창 입니다."
           type={null}
           state={null}
+          setMode={setMode}
         ></UseModal>
       ) : mode.confirm ? (
         <UseModal
@@ -32,6 +33,7 @@ function App() {
           context="예/아니요 창 입니다."
           type={null}
           state={null}
+          setMode={setMode}
         ></UseModal>
       ) : mode.prompt ? (
         <UseModal
@@ -40,6 +42,7 @@ function App() {
           context="값 입력 창 입니다."
           type="text"
           state={{ value: promptValue, setValue: setPromptValue }}
+          setMode={setMode}
         ></UseModal>
       ) : null}
       <button
